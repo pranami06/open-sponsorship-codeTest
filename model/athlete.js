@@ -18,7 +18,10 @@ var athleteSchema = new mongoose.Schema({
     drinksAlcohol: String,
     facebook: String,
     twitter: String,
-    instagram: String
+    instagram: String,
+    youtube:String,
+    twitch:String,
+    snapchat:String
 });
 
 var Athlete = mongoose.model('Athlete', athleteSchema);
