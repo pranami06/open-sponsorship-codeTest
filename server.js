@@ -11,7 +11,7 @@ var app = express();
 var dbUrl = process.env.MONGOLAB_URI|| 'mongodb://user:user123@ds259820.mlab.com:59820/sports-athlete';
 
 // initializing port number
-const port = 8000;
+const port = process.env.PORT || 3000;
 
 // look files into public directory
 app.use(express.static(__dirname + "/public"));
