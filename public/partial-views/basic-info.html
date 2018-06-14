@@ -1,0 +1,81 @@
+<legend>Basic Information</legend>
+<!-- Label for Date of Name -->
+<div class="form-group">
+        <label for="name" class="col-sm-3 control-label">Name</label>
+        <div class="col-sm-8">
+            <input type="text" ng-model="athlete.name" class="form-control" name="name" id="name" placeholder="Name" required>
+        </div>
+    </div>
+
+    <!-- Label for Date of Birth -->
+    <div class="form-group">
+        <label for="dob" class="col-sm-3 control-label">Date of Birth</label>
+        <div class="col-sm-8">
+            <div class='input-group date'>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                </span>
+                <input type='text' ng-model="athlete.dob" name="dob" id="dob" class="form-control" placeholder="mm/dd/yyyy" required />                            
+            </div>
+        </div>
+    </div>
+
+    <!-- Label for Gender -->
+    <div class="form-group">
+        <label for="name" class="col-sm-3 control-label">Gender</label>
+        <div class="col-sm-8">
+            <div class="col-sm-2">
+                <div class="radio-inline">
+                    <label class="custom-control-label" for="male">
+                        <input id="male" ng-model="athlete.gender" name="gender" type="radio" value="Male" class="custom-control-input" checked required>
+                        Male
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="radio-inline">
+                    <label class="custom-control-label" for="female">
+                        <input id="female" ng-model="athlete.gender" name="gender" type="radio" value="Female" class="custom-control-input">
+                        Female
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Label for Nationality -->
+    <div class="form-group">
+        <label for="nationality" class="col-sm-3 control-label">Nationality</label>
+        <div class="col-sm-8">
+            <input type="text" ng-model="athlete.nationality" class="form-control" id="nationality" placeholder="Nationality" required>
+        </div>
+    </div>
+
+    <!-- Label for sports -->
+    <div class="form-group">
+        <label for="sport" class="col-sm-3 control-label">Sports</label>
+        <div class="col-sm-8">
+            <select id="sport" name="sport" class="form-control required" aria-required="true" aria-invalid="false"
+            ng-model="athlete.selectedSport"  multiple="multiple">
+            <option ng-repeat="sport in sportsList" value="{{sport}}">{{sport}}</option>
+            </select>    
+        </div>
+    </div>
+    <!-- Button -->
+    <div class="form-group">
+        <div class="col-sm-9">
+            <a class="btn btn-md btn-info" ui-sref="navigation.about">Next Section
+                <span class="glyphicon glyphicon-circle-arrow-right"></span>
+            </a>
+        </div>
+    </div>
+
+<!-- script for handling calendar(datepicker),select2 for sportsList -->
+<script>
+    jQuery(function() {
+        jQuery( "#dob" ).datepicker();
+        jQuery('#sport').select2({
+            placeholder: 'Select sports'
+        });
+    });
+</script>
