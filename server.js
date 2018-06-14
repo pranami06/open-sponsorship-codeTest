@@ -7,6 +7,9 @@ var Athlete = require('./model/athlete');
 // initializing the express instance
 var app = express();
 
+// db Url declaration
+var dbUrl = 'mongodb://user:user123@ds259820.mlab.com:59820/sports-athlete';
+
 // initializing port number
 const port = 8000;
 
@@ -31,6 +34,11 @@ app.get('/sportsList', (req, res) => {
     res.json(sportsListData);
     
 });
+
+// connecting to database
+mongoose.connect(dbUrl, (err) => {
+    console.log('Mongo Db connection', err);
+})
 
 // function to save athlete data
 app.post("/athlete", (req, res) => {
