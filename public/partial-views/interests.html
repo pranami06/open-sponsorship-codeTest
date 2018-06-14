@@ -1,0 +1,60 @@
+<legend> Interests</legend>
+<!-- Interest -->
+<div class="form-group">
+    <label for="interests" class="col-sm-3 control-label">Interests</label>
+    <div class="col-sm-8">
+        <textarea rows="4" type="text" ng-model="athlete.interests" class="form-control" name="interest" id="interest" placeholder="Interests" required></textarea>
+    </div>
+</div>
+<!-- Charities -->
+<div class="form-group">
+    <label for="charities" class="col-sm-3 control-label">Charities</label>
+    <div class="col-sm-8">
+        <input type="text" ng-model="athlete.charities" class="form-control" name="charities" id="charities" placeholder="Charities" required>
+    </div>
+</div>
+
+<!-- Pets -->
+<div class="form-group">
+    <label for="pets" class="col-sm-3 control-label">Pets</label>
+    <div class="col-sm-8">
+        <input type="text" ng-model="athlete.pets" class="form-control" name="pets" id="pets" placeholder="Pet Name" required>
+    </div>
+</div>
+
+<!-- Married -->
+<div class="form-group">
+    <label for="ifDrinks" class="col-sm-3 control-label">Drink Alcohol</label>
+    <div class="col-sm-8">
+        <div class="col-sm-2">
+            <div class="radio-inline">
+                <label class="custom-control-label" for="yes">
+                <input id="yes" ng-model="athlete.ifDrinks" name="ifDrinks" type="radio" value="Yes" class="custom-control-input" checked required>
+                Yes
+                </label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="radio-inline">
+                <label class="custom-control-label" for="no">
+                <input id="no" ng-model="athlete.ifDrinks" name="ifDrinks" type="radio"value="No" class="custom-control-input">
+                No
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+        <a class="btn btn-md btn-info" ui-sref="navigation.about">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>
+            Previous Section
+        </a>
+        <a class="btn btn-md btn-info" ui-sref="navigation.socialMedia">
+            Next Section
+            <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>    
+    </div>
+</div>

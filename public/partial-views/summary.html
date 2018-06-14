@@ -1,0 +1,143 @@
+<!-- Basic Info edit -->
+<div class="row review-heading">
+    <div class="col-sm-4 text-left">
+        Basic Info
+    </div>
+    <div class="col-sm-8 text-right">
+        <a class="edit" ui-sref="navigation.basicInfo">
+            <span class="glyphicon glyphicon-edit"></span>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-5 text-left">
+       <span>&nbsp;&nbsp;<b>Name : </b>{{athlete.name}}</span>
+    </div>
+    <div class="col-sm-5 text-right">
+       <b>Date of Birth : </b> {{athlete.dob}}
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-5 text-left">
+       <b>Gender : </b> {{athlete.gender}}
+    </div>
+    <div class="col-sm-5 text-right">
+       <b>Nationality : </b> {{athlete.nationality}}
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-10 text-left">
+        <b>&nbsp;Sports : </b> 
+        <span ng-repeat="x in athlete.selectedSport">
+            {{x}} &nbsp;
+       </span>
+    </div>    
+</div>
+<br><br>
+
+<!-- About edit -->
+<div class="row review-heading">
+    <div class="col-sm-4 text-left">
+        About
+    </div>
+    <div class="col-sm-8 text-right">
+        <a class="edit" ui-sref="navigation.about">
+            <span class="glyphicon glyphicon-edit"></span>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-5 text-left">
+       <b>Location : </b> {{athlete.location}}
+    </div>
+    <div class="col-sm-5 text-right">
+       <b>Team : </b> {{athlete.team}}
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-5 text-left">
+       <b>Married : </b> {{athlete.isMarried}}
+    </div>
+    <div class="col-sm-5 text-right">
+       <b>Association : </b> {{athlete.association}}
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-5 text-left">
+       <b>About You : </b> {{athlete.about}}
+    </div>
+</div>
+<br><br>
+
+<!-- Interests edit -->
+<div class="row review-heading">
+    <div class="col-sm-4 text-left">
+        Interests
+    </div>
+    <div class="col-sm-8 text-right">
+        <a class="edit" ui-sref="navigation.interests">
+            <span class="glyphicon glyphicon-edit"></span>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-5 text-left">
+       <b>Interests : </b> {{athlete.interests}}
+    </div>
+    <div class="col-sm-5 text-right">
+       <b>Charities : </b> {{athlete.charities}}
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-5 text-left">
+       <b>Pets : </b> {{athlete.pets}}
+    </div>
+    <div class="col-sm-5 text-right">
+       <b>Drinks Alcohol : </b> {{athlete.ifDrinks}}
+    </div>
+</div>
+<br><br>
+
+<!-- Social Media Edit -->
+<div class="row review-heading">
+    <div class="col-sm-4 text-left">
+        Social Networks
+    </div>
+    <div class="col-sm-8 text-right">
+        <a class="edit" ui-sref="navigation.socialMedia">
+            <span class="glyphicon glyphicon-edit"></span>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-5 text-left">
+       <b>Facebook : </b> {{athlete.facebook}}
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-5 text-left">
+       <b>Twitter : </b> {{athlete.twitter}}
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-5 text-left">
+       <b>Instagram : </b> {{athlete.instagram}}
+    </div>
+</div>
+<br>
+
+<!-- Button -->
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+        <button class="btn btn-md btn-info" type="submit">Submit</button>  
+    </div>
+</div>
