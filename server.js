@@ -30,4 +30,20 @@ app.get('/sportsList', (req, res) => {
     // sending response to client
     res.json(sportsListData);
     
-})
+});
+
+// function to save athlete data
+app.post("/athlete", (req, res) => {
+    //console.log(req.body);
+    var newAthlete = new Athlete(req.body);
+    console.log(newAthlete);
+    newAthlete.save((err) => {
+        if(err){
+            console.log(err);
+            res.sendStatus(500);
+        }else{
+            console.log("Success");
+            res.sendStatus(200);
+        }
+    });
+});
