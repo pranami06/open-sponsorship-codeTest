@@ -1,6 +1,16 @@
 // angular module declaration
 var athleteControllers = angular.module('athleteControllers',[]);
 
+// controller for Athlete List
+athleteControllers.controller('listController',
+    function($scope, $http, $stateParams){
+        $http.get('/getAthleteList').success(function(response){
+            console.log(response);
+            $scope.athletesList = response;
+        })
+
+});
+
 athleteModule.controller('athleteFormController', 
     function($scope, $http, $state){
            
