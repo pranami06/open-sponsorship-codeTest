@@ -8,7 +8,7 @@ var Athlete = require('./model/athlete');
 var app = express();
 
 // db Url declaration
-var dbUrl = 'mongodb://user:user123@ds259820.mlab.com:59820/sports-athlete';
+var dbUrl = process.env.MONGOURI || 'mongodb://user:user123@ds259820.mlab.com:59820/sports-athlete';
 
 // initializing port number
 const port = 8000;
