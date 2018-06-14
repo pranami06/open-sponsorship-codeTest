@@ -1,0 +1,68 @@
+<legend>About</legend>
+<!-- Location -->
+<div class="form-group">
+    <label for="location" class="col-sm-3 control-label">Location</label>
+    <div class="col-sm-8">
+        <input type="text" ng-model="athlete.location" class="form-control" name="location" id="location" placeholder="Location" required>
+    </div>
+</div>
+
+<!-- Team -->
+<div class="form-group">
+    <label for="team" class="col-sm-3 control-label">Team</label>
+    <div class="col-sm-8">
+        <input type="text" ng-model="athlete.team" class="form-control" name="team" id="team" placeholder="e.g. New York Giants" required>
+    </div>
+</div>
+
+<!-- Married -->
+<div class="form-group">
+    <label for="isMarried" class="col-sm-3 control-label">Married</label>
+    <div class="col-sm-8">
+        <div class="col-sm-2">
+            <div class="radio-inline">
+                <label class="custom-control-label" for="yes">
+                <input id="yes" ng-model="athlete.isMarried" name="isMarried" type="radio" value="Yes" class="custom-control-input" checked required>
+                Yes
+                </label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="radio-inline">
+                <label class="custom-control-label" for="no">
+                <input id="no" ng-model="athlete.isMarried" name="gender" type="radio"value="No" class="custom-control-input">
+                No
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Association -->
+<div class="form-group">
+    <label for="association" class="col-sm-3 control-label">Association</label>
+    <div class="col-sm-8">
+        <input type="text" ng-model="athlete.association" class="form-control" name="association" id="association" placeholder="e.g. NBA, NFL" required>
+    </div>
+</div>
+
+<!-- About -->
+<div class="form-group">
+    <label for="about" class="col-sm-3 control-label">About You</label>
+    <div class="col-sm-8">
+        <textarea rows="6" ng-model="athlete.about" class="form-control" name="about" id="about" placeholder="Tell us about you" required></textarea>
+    </div>
+</div>
+<!-- Button -->
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+        <a class="btn btn-md btn-info" ui-sref="navigation.basicInfo">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>
+            Previous Section
+        </a>
+        <a class="btn btn-md btn-info" ui-sref="navigation.interests">
+            Next Section
+            <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>    
+    </div>
+</div>
