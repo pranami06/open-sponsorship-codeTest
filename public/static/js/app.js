@@ -48,7 +48,7 @@ athleteModule.config(
                 templateUrl: '../partial-views/athlete-list.html',
                  controller: 'listController'
             });
-        $urlRouterProvider.otherwise('/welcome/basicInfo');
+        $urlRouterProvider.otherwise('/welcome');
 
     }
 );
