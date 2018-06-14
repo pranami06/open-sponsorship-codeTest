@@ -47,3 +47,12 @@ app.post("/athlete", (req, res) => {
         }
     });
 });
+
+// get All Athlete List
+app.get('/getAthleteList', (req,res) => {
+    Athlete.find({}, function(err, athlets) {
+        var athleteList = JSON.stringify(athlets);
+        console.log(athleteList);
+        res.send(athleteList);
+    })
+});
