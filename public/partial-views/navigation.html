@@ -1,0 +1,28 @@
+<div class="header clearfix">
+    <h3 class="text-muted">Sports Athlete Application</h3>
+</div>
+<div class="jumbotron">
+    <div class="row">
+    
+        <div class="text-center">
+            <!-- the links to nested states using relative paths -->
+            <!-- add the active class if the state matches ui-sref -->
+            <div id="status-buttons">
+                <a ui-sref-active="active" ui-sref=".basicInfo"><span>1</span> Basic Info</a>
+                <a ui-sref-active="active" ui-sref=".about"><span>2</span> About</a>
+                <a ui-sref-active="active" ui-sref=".interests"><span>3</span> Interests</a>
+                <a ui-sref-active="active" ui-sref=".socialMedia"><span>4</span> Social</a>
+            </div>
+        </div>
+        <br>
+        
+        <!-- use ng-submit to catch the form submission and use our Angular function -->
+        <form id="athleteForm" class="form-horizontal" novalidate ng-submit="addAthlete()">
+            <fieldset>
+                <!-- Nested state views will be injected here -->
+                <div id="form-views" ui-view></div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
