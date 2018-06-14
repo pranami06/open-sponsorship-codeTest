@@ -1,0 +1,64 @@
+
+.edit{
+    text-decoration: underline;
+    font-size: 18px;
+}
+.review-heading{
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 21px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left
+}
+.center{
+    text-align: center;
+}
+.label{
+    text-align: right;
+}
+.text-boxes{
+    text-align: center;
+}
+.photo-margin{
+    margin-top: 15px;
+}
+
+input:required:invalid{
+    border-color: rgb(218, 40, 40);
+}
+input:valid{
+    border-color:rgb(79, 175, 79);
+}
+.error{
+    color: rgb(218, 40, 40);
+    margin-left: -250px;
+}
+
+/* numbered buttons */
+#status-buttons a{
+    display:inline-block; 
+    font-size:12px; 
+    margin-right:20px; 
+    text-align:center; 
+    text-transform:uppercase;
+    text-decoration: none;
+ }
+#status-buttons a:hover {
+    text-decoration:none; 
+}
+
+/* style the span as the circled number */
+#status-buttons span { 
+    background:#080808; display:block; height:30px; margin:0 auto 10px; padding-top:5px; width:30px; 
+    border-radius:50%; 
+}
+
+/* active buttons turn light green-blue*/
+#status-buttons a.active span {
+    background:#00BC8C; 
+}
